@@ -1,72 +1,217 @@
 
 <section class="py-3">
 <div class="container px-5 my-2"> 
-      
-<%# .row %>
 
-                      <div class="row gx-4 mt-1">
-                        <div class="col-lg-4 mb-3">
 
-                            <div class="card h-100 shadow border-0">
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-3">
-                            <div class="card h-100 shadow border-0">
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="col-lg-4 mb-3">
-                            <div class="card h-100 shadow border-0">
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-<%# / .row %>
-<%# .row %>
+<div class="container" >
+  <div class="row ">
+    <div class="col-auto align-items-center">
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="filter_categories">Options</label>
+          <select class="form-select" id="filter_categories">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>  
+
+    </div>  
+  </div>
+</div>
+ 
+                      <%# .row %>
                        <div class="row gx-4 mt-1">
-                        <div class="col-lg-4 mb-3">
 
-                            <div class="card h-100 shadow border-0">
+                        <%#  .col-lg-4 %>
+                        <div class="col-lg-4 mb-3">                         
+                            <%# .card %>
+                            <div class="card h-100 border-0">
                                 <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                    <div class= "row">
+                                      <div class="col-md-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
+                                      </div>
+                                      <div class="col-md-4 ms-auto">
+                                         <div class="star-rating" >
+                                            <i class="fa-regular fa-star fa-xs"></i>
+                                         </div>
+                                      </div>
+                                    </div>
                                     <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
                                     <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="small">
+                                      <div class="fw-bold card-text-primary">Category Name</div>
+                                    </div>
+                                  </div>
+                               </div>
                             </div>
+                            <%# /.card %>
                         </div>
-                        <div class="col-lg-4 mb-3">
-                            <div class="card h-100 shadow border-0">
+                        <%# / .col-lg-4 %>
+
+                        <%#  .col-lg-4 %>
+                        <div class="col-lg-4 mb-3">                         
+                            <%# .card %>
+                            <div class="card h-100 border-0">
                                 <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                    <div class= "row">
+                                      <div class="col-md-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
+                                      </div>
+                                      <div class="col-md-4 ms-auto">
+                                         <div class="star-rating" >
+                                            <i class="fa-regular fa-star fa-xs"></i>
+                                         </div>
+                                      </div>
+                                    </div>
                                     <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
                                     <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                             </div>
-                        </div>
-                        <div class="col-lg-4 mb-3">
-                            <div class="card h-100 shadow border-0">
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="small">
+                                      <div class="fw-bold card-text-primary">Category Name</div>
+                                    </div>
+                                  </div>
+                               </div>
                             </div>
+                            <%# /.card %>
                         </div>
+                        <%# / .col-lg-4 %>
+
+                        <%#  .col-lg-4 %>
+                        <div class="col-lg-4 mb-3">                         
+                            <%# .card %>
+                            <div class="card h-100 border-0">
+                                <div class="card-body p-4">
+                                    <div class= "row">
+                                      <div class="col-md-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
+                                      </div>
+                                      <div class="col-md-4 ms-auto">
+                                         <div class="star-rating" >
+                                            <i class="fa-regular fa-star fa-xs"></i>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
+                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="small">
+                                      <div class="fw-bold card-text-primary">Category Name</div>
+                                    </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <%# /.card %>
+                        </div>
+                        <%# / .col-lg-4 %>
+
                       </div>
-<%#  /.row %>
+                      <%#  /.row %>
+
+                      <%# .row %>
+                       <div class="row gx-4 mt-1">
+
+                        <%#  .col-lg-4 %>
+                        <div class="col-lg-4 mb-3">                         
+                            <%# .card %>
+                            <div class="card h-100 border-0">
+                                <div class="card-body p-4">
+                                    <div class= "row">
+                                      <div class="col-md-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
+                                      </div>
+                                      <div class="col-md-4 ms-auto">
+                                         <div class="star-rating" >
+                                            <i class="fa-regular fa-star fa-xs"></i>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
+                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="small">
+                                      <div class="fw-bold card-text-primary">Category Name</div>
+                                    </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <%# /.card %>
+                        </div>
+                        <%# / .col-lg-4 %>
+
+                        <%#  .col-lg-4 %>
+                        <div class="col-lg-4 mb-3">                         
+                            <%# .card %>
+                            <div class="card h-100 border-0">
+                                <div class="card-body p-4">
+                                    <div class= "row">
+                                      <div class="col-md-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
+                                      </div>
+                                      <div class="col-md-4 ms-auto">
+                                         <div class="star-rating" >
+                                            <i class="fa-regular fa-star fa-xs"></i>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
+                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="small">
+                                      <div class="fw-bold card-text-primary">Category Name</div>
+                                    </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <%# /.card %>
+                        </div>
+                        <%# / .col-lg-4 %>
+
+                        <%#  .col-lg-4 %>
+                        <div class="col-lg-4 mb-3">                         
+                            <%# .card %>
+                            <div class="card h-100 border-0">
+                                <div class="card-body p-4">
+                                    <div class= "row">
+                                      <div class="col-md-4">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
+                                      </div>
+                                      <div class="col-md-4 ms-auto">
+                                         <div class="star-rating" >
+                                            <i class="fa-regular fa-star fa-xs"></i>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
+                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="small">
+                                      <div class="fw-bold card-text-primary">Category Name</div>
+                                    </div>
+                                  </div>
+                               </div>
+                            </div>
+                            <%# /.card %>
+                        </div>
+                        <%# / .col-lg-4 %>
+
+                      </div>
+                      <%#  /.row %>
 
   <%# .pagination %>
   <nav aria-label="Movies navigation ">
@@ -91,7 +236,6 @@
   </ul>
 </nav>
 <%# /.pagination %>
-
 
 
     </div>

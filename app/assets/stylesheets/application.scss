@@ -4,9 +4,10 @@ $primary: #BA5809;
 $danger: #ff4136;
 $dark: #41474a;
 
+$input-group-addon-bg:                  $primary;
+$input-group-addon-border-color:        $primary;
+
 @import "bootstrap";
-
-
 
 body,
 html {
@@ -18,13 +19,13 @@ body{
     background-color: #15100A;
 }
 
+.input-group-text{
+  color: white;
+}
+
 div.card{
   background-color:$dark;
   color: white;
-  // .card-header{
-  //   background-color:#81847d ;
-  //   color: white;
-  
   .card-body{
     cursor: context-menu;
     a {
@@ -35,14 +36,23 @@ div.card{
       color: $primary
     }
   }
+  .card-text-primary{
+    color: $primary
+  }
+}
+
+div.star-rating{
+  :hover {
+    color: $primary;
+    cursor: pointer;
+  }
 }
 
 ul.movie-pagination {
   li.page-item {
-    // background-color: $primary;
-      a.page-link:hover {
-        background-color: $primary;
-        color: white;
-      }
+    a.page-link:hover {
+      background-color: $primary;
+      color: white;
+    }
   }
 }
