@@ -2,7 +2,7 @@
 // here your custom bootstrap variables...
 $primary: #BA5809;
 $danger: #ff4136;
-$dark: #15100A;
+$dark: #41474a;
 
 @import "bootstrap";
 
@@ -15,17 +15,34 @@ html {
 
 body{
     padding-top: 3rem;
-    // background-color: #41474a;
+    background-color: #15100A;
 }
 
-// div.card{
-//   // background-color:#f2f0ec;
-//   // .card-header{
-//   //   background-color:#81847d ;
-//   //   color: white;
-//   }
-//   .card-body{
-//     // color: black;
-//   }
+div.card{
+  background-color:$dark;
+  color: white;
+  // .card-header{
+  //   background-color:#81847d ;
+  //   color: white;
+  
+  .card-body{
+    cursor: context-menu;
+    a {
+      color: white;
+      
+    }
+    a:hover {
+      color: $primary
+    }
+  }
+}
 
-// }
+ul.movie-pagination {
+  li.page-item {
+    // background-color: $primary;
+      a.page-link:hover {
+        background-color: $primary;
+        color: white;
+      }
+  }
+}
