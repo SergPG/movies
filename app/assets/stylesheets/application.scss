@@ -1,0 +1,31 @@
+
+// here your custom bootstrap variables...
+$primary: #BA5809;
+$danger: #ff4136;
+$dark: #15100A;
+
+@import "bootstrap";
+
+
+
+body,
+html {
+  height: 100%;
+}
+
+body{
+    padding-top: 3rem;
+    // background-color: #41474a;
+}
+
+// div.card{
+//   // background-color:#f2f0ec;
+//   // .card-header{
+//   //   background-color:#81847d ;
+//   //   color: white;
+//   }
+//   .card-body{
+//     // color: black;
+//   }
+
+// }
