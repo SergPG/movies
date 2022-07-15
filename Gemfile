@@ -26,6 +26,7 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
+gem 'rating'
 
 # Use a Decorator
 # gem 'draper'

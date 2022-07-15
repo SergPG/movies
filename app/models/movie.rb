@@ -3,5 +3,7 @@ class Movie < ApplicationRecord
     
     validates :title, presence: true
     validates :category_id, presence: true
+
+    rating
   end
   
