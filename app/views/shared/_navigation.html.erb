@@ -7,9 +7,13 @@
                         <li class="nav-item">
                             <%= link_to "Home", root_path, class: "nav-link"  %>
                         </li>
-                      
-                      
-                                        
+                        <li class="nav-item mx-3">
+                            <% if user_signed_in? %>
+                                    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-light text-dark me-2" %>
+                            <% else %> 
+                                    <%= link_to "Log in", new_user_session_path, class: "btn btn-primary"  %>
+                            <% end %>    
+                        </li>                    
                     </ul>
                 </div>
     </div>   
