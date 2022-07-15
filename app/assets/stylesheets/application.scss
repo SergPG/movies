@@ -41,13 +41,6 @@ div.card{
   }
 }
 
-div.star-rating{
-  :hover {
-    color: $primary;
-    cursor: pointer;
-  }
-}
-
 ul.movie-pagination {
   li.page-item {
     a.page-link:hover {
