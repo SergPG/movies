@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   
   root to: 'movies#index'
-  resources :movies, only: [:index, :show]
-
+  resources :movies, only: [:index, :show] do
+    get 'page/:page', action: :index, on: :collection
+  end
+  
 end

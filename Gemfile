@@ -31,6 +31,8 @@ gem 'activeadmin'
 
 gem 'cancancan'
 
+gem 'kaminari'
+
 # Use a Decorator
 # gem 'draper'
 

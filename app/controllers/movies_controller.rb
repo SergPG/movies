@@ -22,7 +22,8 @@ class MoviesController < ApplicationController
    def movies
     @movies ||= Movie.where(filter_params)
                      .order(id: :desc)
-                     .limit(6)
+                     .page(params[:page])
+                     
    end
 
    def movie
