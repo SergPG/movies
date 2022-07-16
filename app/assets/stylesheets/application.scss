@@ -7,6 +7,8 @@ $dark: #41474a;
 $input-group-addon-bg:                  $primary;
 $input-group-addon-border-color:        $primary;
 
+$modal-content-bg: #C7C9C6;
+
 @import "bootstrap";
 
 body,
@@ -59,5 +61,12 @@ ul.movie-pagination {
       background-color: $primary;
       color: white;
     }
+  }
+}
+
+.modal-body{
+  div.ratings{
+    cursor: pointer;
+    color: $primary !important;
   }
 }
