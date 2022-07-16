@@ -1,0 +1,5 @@
+ $('#movies_tabs').html("<%= escape_javascript(raw render :partial => 'movies_tabs', :locals => {:movies => movies}).html_safe %>");
+
+<%# var moviesTabs = document.getElementById('movies_tabs')
+moviesTabs.nodeValue = html("<%= escape_javascript(raw render :partial => 'movies_tabs', :locals => {:movies => movies}).html_safe %><%#"); %>
+
