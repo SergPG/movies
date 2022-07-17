@@ -35,3 +35,7 @@
 <% end %>
 </div>
 <%# /.row %>
+
+<%# .pagination %>
+<%= paginate movies, remote: true, params: { category_id: category_id } %>
+<%# /.pagination %>

@@ -4,9 +4,9 @@ class MoviesController < ApplicationController
     # render :index, locals: {categories:, movies: movies }
     respond_to do |format|
       format.html do
-        render :index, locals: {categories:, movies: movies }
+        render :index, locals: {categories:, movies: movies, category_id: params[:category_id] }
       end
-       format.js { render :index, locals: { movies: movies } }
+       format.js { render :index, locals: { movies: movies,  category_id: params[:category_id] } }
     end
   end
 
@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
   private
 
     def filter_params
-      params.permit(:category_id)
+      params.permit(:category_id).compact_blank
     end
    
    def movies

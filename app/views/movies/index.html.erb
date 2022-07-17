@@ -9,7 +9,7 @@
 
       <div class="input-group mb-3">
         <%= label(:category_filter, "Categories", class: "input-group-text") %>  
-        <%= select_tag "category_filter", options_from_collection_for_select(categories, "id", "name"), include_blank: "All", class: "category-filter form-select" %>         
+        <%= select_tag "category_filter", options_from_collection_for_select(categories, "id", "name", selected: category_id), include_blank: "All", class: "category-filter form-select" %>         
       </div>   
 
     </div>  
@@ -18,12 +18,8 @@
 
 
 <div id="movies_tabs"> 
-  <%= render "movies_tabs", movies: movies %>
+  <%= render "movies_tabs", movies: movies, category_id: category_id %>
 </div>
-
-<%# .pagination %>
-<%= paginate movies %>
-<%# /.pagination %>
 
 <%= render "shared/modal_rating_movie" %>
 
