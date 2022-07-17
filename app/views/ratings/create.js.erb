@@ -1,4 +1,5 @@
 
 const div = document.querySelector("#current_rating<%= movie.id %>");
-div.innerHTML = '<i class="fa-regular fa-star"> </i> 7.0';
-<%# movie.rating.average %>
+div.innerHTML = '<i class="fa-regular fa-star"> </i> <%= movie.rating.average %>';
+
+$("#ratingsMovieModal .close").click();

@@ -1,4 +1,6 @@
 class RatingsController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
     current_user.rate movie, rating_score
     render :create, locals: { movie: movie }
@@ -11,7 +13,6 @@ class RatingsController < ApplicationController
   end
 
   def rating_score
-    #  "$("#current_rating<%= movie.id %>").html("<div id="#current_rating<%= movie.id %>> <%= 7 %> </div>");"
-    params.require(:rating_score)
+    params.require(:rating).require(:score)
   end
 end
