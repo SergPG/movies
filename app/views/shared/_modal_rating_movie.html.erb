@@ -28,7 +28,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <%= button_to 'Rate!', movie_ratings_path(13, rating_score: 5), remote: true, class: "btn btn-primary" %>
       </div>
     </div>
   </div>
