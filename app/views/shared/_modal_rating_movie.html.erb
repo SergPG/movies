@@ -57,9 +57,9 @@
     size: 's',
     showCaption: false
     });
+    
   $( document ).ready(function(){
     $('#ratingsMovieModal').on('shown.bs.modal', function (event) {
-      debugger;
       var button = event.relatedTarget;
       var id = button.getAttribute('data-movie-id');
       var modalForm = ratingsMovieModal.querySelector('#movie-rating');
