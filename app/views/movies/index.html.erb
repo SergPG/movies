@@ -67,3 +67,31 @@
   </div>    
 </section>  
     
+    <script>
+$( document ).ready(function()
+{
+     // Пишем свой обработчик нажатия на ссылку
+     $("#Super").click( function(event)
+     {
+          // видим сообщение "Hello"
+          alert("Hello");
+
+          // удаляем стандартный обработчик открытия ссылки (то есть ссылка не открывается)
+          event.preventDefault();
+     });
+
+      $('.category-filter').on('change', function(){
+        $.ajax({
+            url: 'movies',
+            type: 'GET',
+            dataType: 'script',
+            data: { category_id: $(this).val() }
+        });
+    });
+    
+
+
+});
+
+
+    </script>

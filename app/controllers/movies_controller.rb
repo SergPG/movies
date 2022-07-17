@@ -1,13 +1,13 @@
 class MoviesController < ApplicationController
   def index
 
-    render :index, locals: {categories:, movies: movies }
-    # respond_to do |format|
-    #   format.html do
-    #     render :index, locals: {categories:, movies: movies }
-    #   end
-    #   # format.js { render :index, locals: { movies: movies } }
-    # end
+    # render :index, locals: {categories:, movies: movies }
+    respond_to do |format|
+      format.html do
+        render :index, locals: {categories:, movies: movies }
+      end
+       format.js { render :index, locals: { movies: movies } }
+    end
   end
 
   def show
