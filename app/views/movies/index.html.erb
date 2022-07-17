@@ -1,5 +1,5 @@
 
-<section class="py-3">
+<section class="py-3 mt-5">
 <div class="container px-5 my-2"> 
 
 
@@ -7,264 +7,20 @@
   <div class="row ">
     <div class="col-auto align-items-center">
 
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="filter_categories">Options</label>
-          <select class="form-select" id="filter_categories">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>  
+      <div class="input-group mb-3">
+        <%= label(:category_filter, "Categories", class: "input-group-text") %>  
+        <%= select_tag "category_filter", options_from_collection_for_select(categories, "id", "name", selected: category_id), include_blank: "All", class: "category-filter form-select" %>         
+      </div>   
 
     </div>  
   </div>
 </div>
- 
-<%# .row %>
-<div class="row gx-4 mt-1">
 
-<% @movie.each do |movie|%>
-<%#  .col-lg-4 %>
-<div class="col-lg-4 mb-3">                         
-    <%# .card %>
-    <div class="card h-100 border-0">
-        <div class="card-body p-4">
-            <div class= "row">
-              <div class="col-md-4">
-                <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i>
-                  <%= movie.rating&.average %></div>
-              </div>
-              <div class="col-md-4 ms-auto">
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal0202">
-                  <i class="fa-regular fa-star fa-xs"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="<%= movie.id %>">
-                  <i class="fa-regular fa-star fa-xs"></i>
-                </button>
-              </div>
-            </div>
-            <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3"><%= movie.title %></h5></a>
-            <p class="card-text mb-0"><%= movie.text %></p>
-        </div>
-        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-          <div class="d-flex align-items-center">
-            <div class="small">
-              <div class="fw-bold card-text-primary"><%= movie.category.name%></div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <%# /.card %>
+<div id="movies_tabs"> 
+  <%= render "movies_tabs", movies: movies, category_id: category_id %>
 </div>
-<%# / .col-lg-4 %>
-<% end %>
 
-                        <%#  .col-lg-4 %>
-                        <div class="col-lg-4 mb-3">                         
-                            <%# .card %>
-                            <div class="card h-100 border-0">
-                                <div class="card-body p-4">
-                                    <div class= "row">
-                                      <div class="col-md-4">
-                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2 d-none"> <i class="fa-regular fa-star"></i> 7.8</div>
-                                      </div>
-                                      <div class="col-md-4 ms-auto">
-                                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal0202">
-                                          <i class="fa-regular fa-star fa-xs"></i>
-                                        </button>
-                                      </div>
-                                    </div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                  <div class="d-flex align-items-center">
-                                    <div class="small">
-                                      <div class="fw-bold card-text-primary">Category Name</div>
-                                    </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <%# /.card %>
-                        </div>
-                        <%# / .col-lg-4 %>
-
-                        <%#  .col-lg-4 %>
-                        <div class="col-lg-4 mb-3">                         
-                            <%# .card %>
-                            <div class="card h-100 border-0">
-                                <div class="card-body p-4">
-                                    <div class= "row">
-                                      <div class="col-md-4">
-                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
-                                      </div>
-                                      <div class="col-md-4 ms-auto">
-                                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal0202">
-                                          <i class="fa-regular fa-star fa-xs"></i>
-                                        </button>
-                                      </div>
-                                    </div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                  <div class="d-flex align-items-center">
-                                    <div class="small">
-                                      <div class="fw-bold card-text-primary">Category Name</div>
-                                    </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <%# /.card %>
-                        </div>
-                        <%# / .col-lg-4 %>
-
-                      </div>
-                      <%#  /.row %>
-
-                      <%# .row %>
-                       <div class="row gx-4 mt-1">
-
-                        <%#  .col-lg-4 %>
-                        <div class="col-lg-4 mb-3">                         
-                            <%# .card %>
-                            <div class="card h-100 border-0">
-                                <div class="card-body p-4">
-                                    <div class= "row">
-                                      <div class="col-md-4">
-                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
-                                      </div>
-                                      <div class="col-md-4 ms-auto">
-                                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal0202">
-                                          <i class="fa-regular fa-star fa-xs"></i>
-                                        </button>
-                                      </div>
-                                    </div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                  <div class="d-flex align-items-center">
-                                    <div class="small">
-                                      <div class="fw-bold card-text-primary">Category Name</div>
-                                    </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <%# /.card %>
-                        </div>
-                        <%# / .col-lg-4 %>
-
-                        <%#  .col-lg-4 %>
-                        <div class="col-lg-4 mb-3">                         
-                            <%# .card %>
-                            <div class="card h-100 border-0">
-                                <div class="card-body p-4">
-                                    <div class= "row">
-                                      <div class="col-md-4">
-                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
-                                      </div>
-                                      <div class="col-md-4 ms-auto">
-                                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal0202">
-                                          <i class="fa-regular fa-star fa-xs"></i>
-                                        </button>
-                                      </div>
-                                    </div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                  <div class="d-flex align-items-center">
-                                    <div class="small">
-                                      <div class="fw-bold card-text-primary">Category Name</div>
-                                    </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <%# /.card %>
-                        </div>
-                        <%# / .col-lg-4 %>
-
-                        <%#  .col-lg-4 %>
-                        <div class="col-lg-4 mb-3">                         
-                            <%# .card %>
-                            <div class="card h-100 border-0">
-                                <div class="card-body p-4">
-                                    <div class= "row">
-                                      <div class="col-md-4">
-                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"> <i class="fa-regular fa-star"></i> 7.8</div>
-                                      </div>
-                                      <div class="col-md-4 ms-auto">
-                                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal0202">
-                                          <i class="fa-regular fa-star fa-xs"></i>
-                                        </button>
-                                      </div>
-                                    </div>
-                                    <a class="text-decoration-none" href="#!"><h5 class="card-title mb-3">Movie title</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                  <div class="d-flex align-items-center">
-                                    <div class="small">
-                                      <div class="fw-bold card-text-primary">Category Name</div>
-                                    </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <%# /.card %>
-                        </div>
-                        <%# / .col-lg-4 %>
-
-                      </div>
-                      <%#  /.row %>
-
-  <%# .pagination %>
-  <nav aria-label="Movies navigation ">
-  <ul class="pagination  movie-pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">1</span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">4</a></li>
-    <li class="page-item"><a class="page-link" href="#">5</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-<%# /.pagination %>
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal0202" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "shared/modal_rating_movie" %>
 
 
 
@@ -301,7 +57,36 @@
 
 
 
-
+<a href="#" id="Super">Super!</a>
     </div>
   </div>    
 </section>  
+    
+    <script>
+$( document ).ready(function()
+{
+     // Пишем свой обработчик нажатия на ссылку
+     $("#Super").click( function(event)
+     {
+          // видим сообщение "Hello"
+          alert("Hello");
+
+          // удаляем стандартный обработчик открытия ссылки (то есть ссылка не открывается)
+          event.preventDefault();
+     });
+
+      $('.category-filter').on('change', function(){
+        $.ajax({
+            url: 'movies',
+            type: 'GET',
+            dataType: 'script',
+            data: { category_id: $(this).val() }
+        });
+    });
+    
+
+
+});
+
+
+    </script>

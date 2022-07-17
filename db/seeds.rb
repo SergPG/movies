@@ -18,4 +18,4 @@ CATEGORIES.each { |category| Category.create(name: category) }
     Movie.create(title: Faker::Movie.title,
                  category: Category.find(index + 1),
                  text: Faker::Lorem.paragraph(sentence_count: 4))
-    end
+    endAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

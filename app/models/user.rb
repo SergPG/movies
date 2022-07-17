@@ -3,4 +3,8 @@ class User < ApplicationRecord
         :rememberable, :validatable
   
   rating
+
+  def admin?
+    true
+  end
 end

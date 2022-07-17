@@ -19,14 +19,20 @@ gem "stimulus-rails"
 
 gem "jbuilder"
 
-gem 'devise'
-
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
 gem 'rating'
+
+gem 'devise'
+
+gem 'activeadmin'
+
+gem 'cancancan'
+
+gem 'kaminari'
 
 # Use a Decorator
 # gem 'draper'
