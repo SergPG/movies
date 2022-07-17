@@ -38,11 +38,6 @@
                   <%= movie.rating&.average || "0.0" %>
                 </div>
               </div>
-              <div class="col-md-4 ms-auto">
-                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ratingsMovieModal">
-                  <i class="fa-regular fa-star fa-xs"></i>
-                </button>
-              </div>
             </div>
               <h5 class="card-title mb-3"><%= movie.title %></h5>
               <p class="card-text mb-0">
@@ -55,8 +50,6 @@
       </div>
       <%# / .col-lg-4 %>
     </div>
- 
-  <%= render "shared/modal_rating_movie" %>
 
     </div> 
   </div> 
