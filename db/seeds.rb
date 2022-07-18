@@ -1,10 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
 CATEGORIES = [
@@ -18,4 +14,6 @@ CATEGORIES.each { |category| Category.create(name: category) }
     Movie.create(title: Faker::Movie.title,
                  category: Category.find(index + 1),
                  text: Faker::Lorem.paragraph(sentence_count: 4))
-    endAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+    end
+4.times { Movie.create(title: Faker::Movie.title, category: Category.first, text: Faker::Lorem.paragraph(sentence_count: 4)) }
+User.create!(email: 'admin@admin.com', password: '123456', password_confirmation: '123456', admin: true)

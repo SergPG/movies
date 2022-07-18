@@ -1,16 +1,13 @@
-<%# .row %>
 <div class="row gx-4 mt-1">
 
 <% movies.each do |movie|%>
-<%#  .col-lg-4 %>
 <div class="col-lg-4 mb-3">                        
-    <%# .card %>
     <div class="card h-100 border-0">
         <div class="card-body p-4">
             <div class= "row">
               <div class="col-md-4">
                 <div class="badge bg-primary bg-gradient rounded-pill mb-2" id="current_rating<%= movie.id %>"> <i class="fa-regular fa-star"></i> 
-                  <%= movie.rating&.average || "0.0" %>
+                  <%= movie.decorate.average_rating_format %>
                 </div>
               </div>
               <div class="col-md-4 ms-auto">
@@ -31,12 +28,9 @@
           </div>
         </div>
     </div>
-    <%# /.card %>
 </div>
-<%# / .col-lg-4 %>
 <% end %>
 </div>
-<%# /.row %>
 
 <%# .pagination %>
 <%= paginate movies, remote: true, params: { category_id: category_id } %>
