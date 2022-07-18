@@ -30,7 +30,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
-            <%= f.submit 'Rate!', class: "btn btn-primary" %>
+            <%= f.submit 'Rate!', id: 'rate', class: "btn btn-primary" %>
           </div>
         <% end %>
       <% else %>
@@ -57,14 +57,4 @@
     size: 's',
     showCaption: false
     });
-    
-  $( document ).ready(function(){
-    $('#ratingsMovieModal').on('shown.bs.modal', function (event) {
-      var button = event.relatedTarget;
-      var id = button.getAttribute('data-movie-id');
-      var modalForm = ratingsMovieModal.querySelector('#movie-rating');
-      var action = "<%=movie_ratings_path("movie_id")%>".replace("movie_id", id);
-      modalForm.setAttribute('action', action);
-    })
-  })
 </script>

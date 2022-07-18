@@ -14,7 +14,7 @@
                 </div>
               </div>
               <div class="col-md-4 ms-auto">
-                <button type="button" id="modal-rating" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ratingsMovieModal" data-movie-id="<%= movie.id %>">
+                <button type="button" id="modal-rating<%= movie.id %>" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ratingsMovieModal" data-movie-id="<%= movie.id %>">
                   <i class="fa-regular fa-star fa-xs"></i>
                 </button>
               </div>
@@ -41,3 +41,15 @@
 <%# .pagination %>
 <%= paginate movies, remote: true, params: { category_id: category_id } %>
 <%# /.pagination %>
+
+<script>
+  $( document ).ready(function(){
+    $('#ratingsMovieModal').on('shown.bs.modal', function (event) {
+      var button = event.relatedTarget;
+      var id = button.getAttribute('data-movie-id');
+      var modalForm = ratingsMovieModal.querySelector('#movie-rating');
+      var action = "<%=movie_ratings_path("movie_id")%>".replace("movie_id", id);
+      modalForm.setAttribute('action', action);
+    })
+  })
+</script>

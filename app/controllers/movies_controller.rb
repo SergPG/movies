@@ -1,7 +1,5 @@
 class MoviesController < ApplicationController
   def index
-
-    # render :index, locals: {categories:, movies: movies }
     respond_to do |format|
       format.html do
         render :index, locals: {categories:, movies: movies, category_id: params[:category_id] }
