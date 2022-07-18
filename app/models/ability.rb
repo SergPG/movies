@@ -33,7 +33,5 @@ class Ability
 
     can [:manage], :all
     can :manage, ActiveAdmin::Page
-
-
   end
 end

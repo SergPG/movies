@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class RatingsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def create
     current_user.rate movie, rating_score
-    render :create, locals: { movie: movie }
+    render :create, locals: { movie: }
   end
 
   private

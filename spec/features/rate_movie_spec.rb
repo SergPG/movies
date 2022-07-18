@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.feature 'Rate movie', type: :feature do
@@ -24,11 +26,10 @@ RSpec.feature 'Rate movie', type: :feature do
     sleep(0.5)
 
     find_field('rating_score', visible: false).set(10)
-    click_button("Rate!")
-    
+    click_button('Rate!')
+
     sleep(0.5)
-    
+
     expect(page.find(current_rating_id).text).to have_content('9.0')
   end
-
 end
