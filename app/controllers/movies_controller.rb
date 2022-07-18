@@ -27,7 +27,7 @@ class MoviesController < ApplicationController
   end
 
   def movie
-    @movie ||= Movie.find(params[:id])
+    @movie ||= Movie.friendly.find(params[:id])
   end
 
   def categories

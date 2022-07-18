@@ -3,6 +3,8 @@
 class Movie < ApplicationRecord
   LIMIT_IN_PAGE = 3
 
+  extend FriendlyId
+
   belongs_to :category
 
   validates :title, presence: true
@@ -10,4 +12,5 @@ class Movie < ApplicationRecord
 
   rating
   paginates_per LIMIT_IN_PAGE
+  friendly_id :title, use: :slugged
 end
