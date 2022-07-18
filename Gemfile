@@ -62,6 +62,8 @@ gem 'sassc-rails'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'faker'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -88,7 +90,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 5.0'
